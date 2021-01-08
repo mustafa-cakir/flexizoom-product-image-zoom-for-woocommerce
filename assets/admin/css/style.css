@@ -1,0 +1,219 @@
+.flexizoom-admin .form-group {
+  position: relative;
+}
+.flexizoom-admin .form-group input[type=checkbox] {
+  opacity: 0;
+}
+.flexizoom-admin-group .flexizoom-admin-pro-only {
+  right: 25px;
+}
+.flexizoom-admin input:disabled {
+  cursor: not-allowed;
+}
+.flexizoom-admin-pro-only {
+  flex-wrap: nowrap;
+  color: maroon;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 10px;
+  z-index: 2;
+}
+.flexizoom-admin-logo {
+  max-width: 100%;
+  max-height: 50px;
+  margin-left: 15px;
+}
+.flexizoom-admin-preview {
+  position: sticky;
+  top: 40px;
+  max-width: 300px;
+}
+.flexizoom-admin-preview h4 {
+  border-bottom: 2px solid #000;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+.flexizoom-admin-preview .flexi-zoom-others-container .splide__slide img {
+  max-height: 100px;
+}
+.flexizoom-admin-form-group-desc {
+  font-style: italic;
+  font-size: 0.7rem;
+  color: #444;
+  padding: 0 15px;
+  max-width: 200px;
+}
+.flexizoom-admin-zoom-level-value {
+  margin-left: 15px;
+  border-radius: 20px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #dee2e6;
+  width: 40px;
+}
+.flexizoom-admin-text-small {
+  font-size: 0.9rem;
+}
+.flexizoom-admin .custom-switch .custom-control-label {
+  padding-left: 40px;
+}
+.flexizoom-admin .custom-switch .custom-control-label:before {
+  height: 2rem;
+  width: 3.5rem;
+  border-radius: 1rem;
+  top: -0.25rem;
+}
+.flexizoom-admin .custom-switch .custom-control-label:after {
+  width: calc(2rem - 4px);
+  height: calc(2rem - 4px);
+  border-radius: 1em;
+  top: -2px;
+}
+.flexizoom-admin .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
+  left: calc(-1.5rem + 2px);
+}
+.flexizoom-admin-save-button {
+  position: sticky;
+  bottom: 0;
+  z-index: 9;
+}
+.flexizoom-admin-save-button-changed {
+  font-size: 12px;
+  color: #007bff;
+  font-style: italic;
+  margin-right: 15px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+.flexizoom-admin-save-button-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 1px;
+  z-index: 1;
+}
+.flexizoom-admin-save-button-wrapper {
+  background: #fff;
+  padding: 15px;
+  text-align: right;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.flexizoom-admin-input-has-right-label {
+  position: relative;
+}
+.flexizoom-admin-input-has-right-label input {
+  padding-right: 30px;
+}
+.flexizoom-admin-input-has-right-label span {
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  top: 0;
+  font-size: 0.7rem;
+}
+.flexizoom-admin-group {
+  margin: 25px 0;
+}
+.flexizoom-admin-group-title {
+  padding: 15px 25px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  border-radius: 15px 15px 0 0;
+}
+.flexizoom-admin-group-items {
+  padding: 15px 0;
+  background: #f2f2f2;
+}
+.flexizoom-admin input[type=text],
+.flexizoom-admin input[type=number],
+.flexizoom-admin select {
+  max-width: 185px;
+}
+.flexizoom-admin .dashicons {
+  position: relative;
+  top: 2px;
+}
+.flexizoom-admin .btn-group > .btn {
+  min-width: 80px;
+}
+.flexizoom-admin .btn-outline-secondary.disabled {
+  cursor: not-allowed;
+}
+.flexizoom-admin .btn-outline-secondary:not(.disabled):hover {
+  background-color: rgba(108, 117, 125, 0.2);
+  color: #6c757d;
+  border-color: #6c757d;
+}
+.flexizoom-admin .wp-picker-container {
+  position: relative;
+}
+.flexizoom-admin .wp-picker-container button {
+  margin: 0;
+}
+.flexizoom-admin .wp-picker-container label {
+  margin: 0 0 0 5px;
+}
+.flexizoom-admin .wp-picker-container .wp-picker-holder {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.custom-control-label {
+  padding-left: 20px;
+}
+.text-color-gray {
+  color: #666;
+}
+.text-color-gray-light {
+  color: #999;
+}
+.text-color-gray-dark {
+  color: #ccc;
+}
+.text-style-italic {
+  font-style: italic;
+}
+.text-style-bold {
+  font-weight: bold;
+}
+.text-size-small {
+  font-size: 0.75rem;
+}
+.text-size-medium {
+  font-size: 0.9rem;
+}
+.text-size-normal {
+  font-size: 1rem;
+}
+.text-size-large {
+  font-size: 1.5rem;
+}
+.text-size-large-x2 {
+  font-size: 2rem;
+}
+
+body .tooltip .arrow {
+  margin-left: 0;
+}
+body .tooltip .arrow:after {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

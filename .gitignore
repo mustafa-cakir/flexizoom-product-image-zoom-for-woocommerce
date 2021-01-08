@@ -1,0 +1,13 @@
+# misc
+.DS_Store
+.idea
+
+# eslint file
+.jshintrc
+
+# ES6 javascript files
+**/js/script.js
+
+# scss files
+*.scss
+
