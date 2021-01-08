@@ -25,16 +25,16 @@ if (!class_exists('FlexiZoom_Admin')) :
 		{
 			if (isset($_GET['page']) && $_GET['page'] === 'flexizoom') {
 				// scripts
-				wp_enqueue_script('bootstrap-bundle', '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js', array('jquery'), FLEXI_ZOOM_VERSION, true);
+				wp_enqueue_script('bootstrap-bundle', FLEXI_ZOOM_ADMIN_ASSETS . '/js/bootstrap.bundle.min.js', array('jquery'), FLEXI_ZOOM_VERSION, true);
 				wp_enqueue_script('wp-color-picker', '', array('jquery'), FLEXI_ZOOM_VERSION, true);
 				wp_enqueue_script('flexizoom-js', FLEXI_ZOOM_FRONTEND_ASSETS . '/dist/flexiZoom.min.js', array(), FLEXI_ZOOM_VERSION, true);
 				wp_enqueue_script('flexi-zoom-admin', FLEXI_ZOOM_ADMIN_ASSETS . '/js/script-es2015.js', array('jquery', 'flexizoom-js', 'wp-color-picker', 'bootstrap-bundle'), FLEXI_ZOOM_VERSION, true);
 
 				// styles
-				wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css', array(), FLEXI_ZOOM_VERSION);
+				wp_enqueue_style('bootstrap', FLEXI_ZOOM_ADMIN_ASSETS . '/css/bootstrap.min.css', array(), FLEXI_ZOOM_VERSION);
 				wp_enqueue_style('wp-color-picker');
 				wp_enqueue_style('flexizoom-css', FLEXI_ZOOM_FRONTEND_ASSETS . '/dist/flexiZoom.min.css', array(), FLEXI_ZOOM_VERSION);
-				wp_enqueue_style('flexi-zoom-admin', FLEXI_ZOOM_ADMIN_ASSETS . '/css/style.css', '', FLEXI_ZOOM_VERSION);
+				wp_enqueue_style('flexi-zoom-admin', FLEXI_ZOOM_ADMIN_ASSETS . '/css/style.css', array(), FLEXI_ZOOM_VERSION);
 			}
 		}
 
