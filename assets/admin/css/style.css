@@ -1,11 +1,109 @@
+.flexizoom-admin .form-group .form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+}
+.flexizoom-admin .form-group .form-check .form-check-input {
+  float: left;
+  margin-left: -1.5em;
+}
+.flexizoom-admin .form-group .form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  appearance: none;
+  color-adjust: exact;
+  transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .flexizoom-admin .form-group .form-check-input {
+    transition: none;
+  }
+}
+.flexizoom-admin .form-group .form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.flexizoom-admin .form-group .form-check-input[type=radio] {
+  border-radius: 50%;
+}
+.flexizoom-admin .form-group .form-check-input:active {
+  filter: brightness(90%);
+}
+.flexizoom-admin .form-group .form-check-input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.flexizoom-admin .form-group .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.flexizoom-admin .form-group .form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+.flexizoom-admin .form-group .form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+.flexizoom-admin .form-group .form-check-input[type=checkbox]:indeterminate {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.flexizoom-admin .form-group .form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.flexizoom-admin .form-group .form-check-input[disabled] ~ .form-check-label, .flexizoom-admin .form-group .form-check-input:disabled ~ .form-check-label {
+  opacity: 0.5;
+}
+.flexizoom-admin .form-group .form-switch {
+  padding-left: 2.5em;
+}
+.flexizoom-admin .form-group .form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+}
+.flexizoom-admin .form-group .form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+}
+.flexizoom-admin .form-group .form-switch .form-check-input:checked {
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+.flexizoom-admin .form-group .form-check-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.flexizoom-admin .form-group .btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.flexizoom-admin .form-group .btn-check[disabled] + .btn, .flexizoom-admin .form-group .btn-check:disabled + .btn {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.65;
+}
+
 .flexizoom-admin .form-group {
   position: relative;
 }
-.flexizoom-admin .form-group input[type=checkbox] {
-  opacity: 0;
+.flexizoom-admin .form-group input[type=checkbox]:before {
+  display: none;
 }
-.flexizoom-admin-group .flexizoom-admin-pro-only {
-  right: 25px;
+.flexizoom-admin .form-group .form-check {
+  font-size: 1.5rem;
 }
 .flexizoom-admin input:disabled {
   cursor: not-allowed;
@@ -22,6 +120,7 @@
   bottom: 0;
   font-size: 10px;
   z-index: 2;
+  width: 130px;
 }
 .flexizoom-admin-logo {
   max-width: 100%;
@@ -60,24 +159,6 @@
 }
 .flexizoom-admin-text-small {
   font-size: 0.9rem;
-}
-.flexizoom-admin .custom-switch .custom-control-label {
-  padding-left: 40px;
-}
-.flexizoom-admin .custom-switch .custom-control-label:before {
-  height: 2rem;
-  width: 3.5rem;
-  border-radius: 1rem;
-  top: -0.25rem;
-}
-.flexizoom-admin .custom-switch .custom-control-label:after {
-  width: calc(2rem - 4px);
-  height: calc(2rem - 4px);
-  border-radius: 1em;
-  top: -2px;
-}
-.flexizoom-admin .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
-  left: calc(-1.5rem + 2px);
 }
 .flexizoom-admin-save-button {
   position: sticky;
@@ -136,8 +217,14 @@
   border-radius: 15px 15px 0 0;
 }
 .flexizoom-admin-group-items {
-  padding: 15px 0;
+  padding: 15px;
   background: #f2f2f2;
+}
+.flexizoom-admin-group-items .form-group {
+  margin-bottom: 15px;
+}
+.flexizoom-admin-group-items .form-group:last-child {
+  margin-bottom: 0;
 }
 .flexizoom-admin input[type=text],
 .flexizoom-admin input[type=number],
@@ -147,6 +234,11 @@
 .flexizoom-admin .dashicons {
   position: relative;
   top: 2px;
+}
+.flexizoom-admin .btn-check:checked + .btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 .flexizoom-admin .btn-group > .btn {
   min-width: 80px;

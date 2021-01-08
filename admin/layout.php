@@ -334,12 +334,13 @@ $brand = vsprintf(
 							  '',
 							  'Choose whether or not you want to keep the lens inside, no overflow the image.'
 							); ?>
+                            <hr />
                         </div>
                         <div class="tab-pane fade" id="tab-additional-pics-settings" role="tabpanel">
 							<?php echo flxizoom_admin_field_switcher(
 							  'slider_is_enable',
 							  'on',
-							  'Additional Pictures Slider',
+							  'Slider',
 							  '',
 							  'You can disable the additional slider completely. If you enable arrows from the Zoom tab, users will still be able to navigate through pictures by clicking the next/prev arrows.'
 							); ?>
@@ -540,6 +541,7 @@ $brand = vsprintf(
 							  '',
 							  '# of slides to scroll when next/prev buttons are clicked'
 							); ?>
+                            <hr />
 							<?php echo flxizoom_admin_field_radiogroupbtns(
 							  'slider_focus',
 							  'center',
@@ -558,6 +560,7 @@ $brand = vsprintf(
 							  '',
 							  'Set which slide should be focused while sliding next or prev.'
 							); ?>
+                            <hr />
                         </div>
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel">
 							<?php echo flxizoom_admin_field_switcher(
@@ -614,6 +617,7 @@ $brand = vsprintf(
 							  '',
 							  'Choose position for description, relative to the image.'
 							); ?>
+                            <hr />
 							<?php echo flxizoom_admin_field_switcher(
 							  'lightbox_is_close_button',
 							  'off',
@@ -931,6 +935,7 @@ $brand = vsprintf(
 							  'Set the border color for image and size variants when they are hovered.',
 							  ''
 							); ?>
+                            <hr/>
 							<?php echo flxizoom_admin_field_colorpicker(
 							  'variants_hover_background_color',
 							  '#ffffff',
@@ -941,7 +946,7 @@ $brand = vsprintf(
 							  'Set the background color for image and size variants when they are hovered.',
 							  ''
 							); ?>
-
+                            <hr/>
 							<?php echo flxizoom_admin_field_colorpicker(
 							  'variants_active_border_color',
 							  '#6cb7e3',
@@ -952,7 +957,7 @@ $brand = vsprintf(
 							  'Set the border color for image and size variants when they are active.',
 							  ''
 							); ?>
-
+                            <hr/>
 							<?php echo flxizoom_admin_field_colorpicker(
 							  'variants_active_background_color',
 							  '#f3faff',
@@ -964,7 +969,6 @@ $brand = vsprintf(
 							  ''
 							); ?>
                             <hr/>
-
                         </div>
                     </div>
                     <div class="flexizoom-admin-save-button">

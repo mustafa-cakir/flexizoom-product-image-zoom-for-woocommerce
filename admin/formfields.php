@@ -21,23 +21,26 @@ if (!function_exists('flxizoom_admin_field_switcher')) {
 		$pro_template = $is_disabled ? flxizoom_admin_field_pro_text() : '';
 
 		$template = '
-     <div class="form-group row align-items-center" data-field-name="${name}">
-     	<label class="col-md-3 col-form-label text-md-right" for="${name}">${label}${info_template}</label>
-     	<div class="col-md-9 d-flex align-items-center">
-        	<div class="custom-control custom-switch">
-                <input type="hidden"
-                       value="${value}"
-                       id="${name}_value" name="flexizoom_options[${name}]">
-                <input type="checkbox" ${checked} ${disabled}
-                       onchange="${name}_value.value = this.checked ? \'on\' : \'off\'"
-                       class="custom-control-input" id="${name}"
-                >
-                <label class="custom-control-label" for="${name}"></label>
-            </div>
-            ${desc_template}
-        </div>
-        ${pro_template}
-    </div>
+	     <div class="form-group row align-items-center" data-field-name="${name}">
+	        <label class="col-md-3 col-form-label text-md-right" for="${name}">${label}${info_template}</label>
+	        <div class="col-md-9 d-flex align-items-center">
+	            <div class="form-check form-switch">
+				     <input type="hidden"
+	                       value="${value}"
+	                       id="${name}_value"
+	                       name="flexizoom_options[${name}]"
+	                       class="flexizoom-switcher-checkbox"
+	                       >
+				    <input
+				    	onchange="${name}_value.value = this.checked ? \'on\' : \'off\'"
+				    	class="form-check-input"
+				    	type="checkbox"
+				    	id="${name}" ${checked} ${disabled} >
+				</div>
+	            ${desc_template}
+	        </div>
+	        ${pro_template}
+	    </div>
    ';
 		return strtr($template, array(
 		  '${name}' => $name,
@@ -187,11 +190,10 @@ if (!function_exists('flxizoom_admin_field_radiogroupbtns')) {
 		foreach ($options as $option) {
 			$btn_disabled = isset($option['disabled']) && $option['disabled'] ? "disabled" : '';
 			$btn_checked = isset($option['name']) && $option['name'] === $value ? "checked" : "";
-			$btn_template = '<label class="btn btn-outline-secondary ${btn_disabled}">
-                    <input type="radio" name="flexizoom_options[${name}]" value="${btn_name}"
-                           id="zoom_type_2" ${btn_checked}
-                           class="d-none">${label}
-                           </label>';
+			$btn_template = '
+				<input type="radio" class="btn-check" name="flexizoom_options[${name}]" id="${name}_${btn_name}" autocomplete="off" ${btn_checked} ${btn_disabled}>
+  				<label class="btn btn-outline-secondary" for="${name}_${btn_name}">${label}</label>
+			';
 			$btns_template .= strtr($btn_template, array(
 			  '${name}' => $name,
 			  '${btn_name}' => isset($option['name']) ? $option['name'] : '',
@@ -205,7 +207,7 @@ if (!function_exists('flxizoom_admin_field_radiogroupbtns')) {
      <div class="form-group row">
         <label class="col-md-3 col-form-label text-md-right">${label}${info_template}</label>
         <div class="col-md-9 d-flex align-items-center">
-            <div class="btn-group" data-toggle="buttons">${btns_template}</div>
+            <div class="btn-group" role="group">${btns_template}</div>
             ${desc_template}
         </div>
     </div>
