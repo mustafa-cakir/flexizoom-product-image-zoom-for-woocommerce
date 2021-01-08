@@ -47,14 +47,14 @@ $brand = vsprintf(
                 <div class="col col-12 col-lg-7">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" data-bs-toggle="tab" href="#tab-zoom-settings"
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#tab-zoom-settings"
                                role="tab">Zoom</a>
-                            <a class="nav-item nav-link" data-bs-toggle="tab" href="#tab-additional-pics-settings"
+                            <a class="nav-item nav-link" data-toggle="tab" href="#tab-additional-pics-settings"
                                role="tab">Additional
                                 Pictures Slider</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact"
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
                                role="tab">Lightbox</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-variations"
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-variations"
                                role="tab">Variations</a>
                         </div>
 

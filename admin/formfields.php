@@ -191,8 +191,9 @@ if (!function_exists('flxizoom_admin_field_radiogroupbtns')) {
 			$btn_disabled = isset($option['disabled']) && $option['disabled'] ? "disabled" : '';
 			$btn_checked = isset($option['name']) && $option['name'] === $value ? "checked" : "";
 			$btn_template = '
-				<input type="radio" value="${btn_name}" class="btn-check" name="flexizoom_options[${name}]" id="${name}_${btn_name}" autocomplete="off" ${btn_checked} ${btn_disabled}>
-  				<label class="btn btn-outline-secondary" for="${name}_${btn_name}">${label}</label>
+				<label class="btn btn-outline-secondary ${btn_disabled}">
+    				<input type="radio" name="flexizoom_options[${name}]" value="${btn_name}" id="${name}_${btn_name}" ${btn_checked} class="d-none">${label}
+  				</label>	
 			';
 			$btns_template .= strtr($btn_template, array(
 			  '${name}' => $name,
@@ -207,7 +208,7 @@ if (!function_exists('flxizoom_admin_field_radiogroupbtns')) {
      <div class="form-group row">
         <label class="col-md-3 col-form-label text-md-right">${label}${info_template}</label>
         <div class="col-md-9 d-flex align-items-center">
-            <div class="btn-group" role="group">${btns_template}</div>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">${btns_template}</div>
             ${desc_template}
         </div>
     </div>

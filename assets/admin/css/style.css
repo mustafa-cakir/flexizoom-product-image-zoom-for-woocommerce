@@ -238,18 +238,13 @@
   position: relative;
   top: 2px;
 }
-.flexizoom-admin .btn-check:checked + .btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
 .flexizoom-admin .btn-group > .btn {
   min-width: 80px;
 }
 .flexizoom-admin .btn-outline-secondary.disabled {
   cursor: not-allowed;
 }
-.flexizoom-admin .btn-outline-secondary:not(.disabled):hover {
+.flexizoom-admin .btn-outline-secondary:not(.disabled):not(.active):hover {
   background-color: rgba(108, 117, 125, 0.2);
   color: #6c757d;
   border-color: #6c757d;
