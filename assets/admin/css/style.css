@@ -105,6 +105,9 @@
 .flexizoom-admin .form-group .form-check {
   font-size: 1.5rem;
 }
+.flexizoom-admin .custom-range {
+  width: 100%;
+}
 .flexizoom-admin input:disabled {
   cursor: not-allowed;
 }

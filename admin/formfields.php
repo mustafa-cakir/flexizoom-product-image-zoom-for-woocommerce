@@ -191,7 +191,7 @@ if (!function_exists('flxizoom_admin_field_radiogroupbtns')) {
 			$btn_disabled = isset($option['disabled']) && $option['disabled'] ? "disabled" : '';
 			$btn_checked = isset($option['name']) && $option['name'] === $value ? "checked" : "";
 			$btn_template = '
-				<input type="radio" class="btn-check" name="flexizoom_options[${name}]" id="${name}_${btn_name}" autocomplete="off" ${btn_checked} ${btn_disabled}>
+				<input type="radio" value="${btn_name}" class="btn-check" name="flexizoom_options[${name}]" id="${name}_${btn_name}" autocomplete="off" ${btn_checked} ${btn_disabled}>
   				<label class="btn btn-outline-secondary" for="${name}_${btn_name}">${label}</label>
 			';
 			$btns_template .= strtr($btn_template, array(
