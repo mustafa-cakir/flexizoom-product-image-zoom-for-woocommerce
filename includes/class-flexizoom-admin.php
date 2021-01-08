@@ -32,7 +32,6 @@ if (!class_exists('FlexiZoom_Admin')) :
 
 				// styles
 				wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css', array(), FLEXI_ZOOM_VERSION);
-//				wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.css', array(), FLEXI_ZOOM_VERSION);
 				wp_enqueue_style('wp-color-picker');
 				wp_enqueue_style('flexizoom-css', FLEXI_ZOOM_FRONTEND_ASSETS . '/dist/flexiZoom.min.css', array(), FLEXI_ZOOM_VERSION);
 				wp_enqueue_style('flexi-zoom-admin', FLEXI_ZOOM_ADMIN_ASSETS . '/css/style.css', '', FLEXI_ZOOM_VERSION);
